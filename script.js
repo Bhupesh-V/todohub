@@ -1,6 +1,5 @@
 var repositories = [];
 var username;
-let todolist = [];
 
 
 function getUsername() {
@@ -18,10 +17,8 @@ function getRepositories(username){
 		listOfRepos(repos, username);
 	});
 }
-/*function listOfRepos(repos){
-	const names = repos.map(repository => `<li>${repository.full_name}</li>`).join("\n");
-	return `<ul>${names}</ul>`
-}*/
+
+
 function listOfRepos(repos){
 	for (var i=0;i<repos.length;i++){
 		if (repos[i].fork == false){
@@ -42,34 +39,27 @@ function getIssues(){
 			listOfIssues(issues);
 		});
 	}
-	//console.log(repositories);
-	displayList();
 }
 
 
 function listOfIssues(issues){
 	for (var i=0;i<issues.length;i++){
-		if (issues[i] != null){
-			var tododict = {};
-			tododict['title'] = issues[i].title;
-			tododict['link'] = issues[i].html_url;
-			//console.log(tododict);
-			todolist.push(tododict);
+
+		if (issues[i] != null) {
+			htmllist = document.getElementById("list");
+			var para = document.createElement("p");
+
+			//create link
+			var issuelink = document.createElement("a");
+			issuelink.setAttribute("href", issues[i].html_url);
+			var issueTitle = document.createTextNode(issues[i].title);;
+			issuelink.appendChild(issueTitle);
+
+			//attach the link to the <p> tag
+			para.appendChild(issuelink);
+			
+			//attach the <p> tag to div = "list"
+			list.appendChild(para);
 		}
 	}
-	//console.log(todolist)
-}
-
-function displayList(){
-	const todos = document.getElementById("todos");
-	todos.innerHTML = "<p>Loading List ...</p>";
-	console.log(todolist);
-	todolist.forEach(value => {
-	  console.log(value)
-	})
-/*	for (var i=0;i<todoItems.length;i++){
-		todo = "<a href='" + todoItems[i].link + "'>" + todoItems[i].title + "</a>" + "\n";
-		console.log(todo);
-		todos.innerHTML += todo;
-	}*/
 }
