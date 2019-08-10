@@ -1,0 +1,16 @@
+{
+  "name": "todohub",
+  "short_name": "todohub",
+  "description": "Create a to-do list using GitHub issues",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
