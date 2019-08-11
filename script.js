@@ -5,7 +5,7 @@ var username;
 function addLoadSVG(){
 	loadsvg = document.getElementById("load");
 	setimg = document.createElement("img");
-	setimg.setAttribute("src", "puff.svg");
+	setimg.setAttribute("src", "images/puff.svg");
 	setimg.setAttribute("width", "40");
 	loadsvg.appendChild(setimg);
 }

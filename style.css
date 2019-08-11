@@ -7,12 +7,18 @@ p {
 	padding: 1.25rem;
 }
 
+label {
+	max-width: 50%;
+	font-weight: bold;
+}
 body {
+	min-height: 400px;
+   	margin-bottom: 180px;
     color: #4a4a4a;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
-    	font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1 {
@@ -44,7 +50,7 @@ input: hover {
 input {
 
 	box-shadow: inset 2px 3px 1px rgba(10,10,10,.1);
-	max-width: 100%;
+	max-width: 50%;
 	/*width: 100%;*/
 	border-color: #dbdbdb;
 	border-radius: 4px;
@@ -63,6 +69,7 @@ button:hover {
 }
 
 button {
+	max-width: 50%;
 	background-color: rgb(39, 108, 218);
 	color: white;
 	cursor: pointer;
@@ -76,3 +83,22 @@ button {
 	border: 1px solid transparent;
 	-webkit-appearance: none;
 }
+
+footer {	
+	position: fixed;
+	width: 100%;
+	color: #0d0d0d;
+	text-align: center;
+	height: 56px;
+	padding: 20px;
+	background-color: #fafafa;
+	bottom: 0px;
+	padding-bottom: 50px;
+	left: 0px;
+}/*
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){ 
+  footer { 
+	max-width: 100%; 
+    align-items: center;
+  }
+}*/

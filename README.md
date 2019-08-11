@@ -2,6 +2,14 @@
 
 > Create a to-do ✅ list using GitHub issues.
 
+<p align="center">
+    <a href="https://github.com/Bhupesh-V/todohub">
+        <img src="https://github.com/Bhupesh-V/todohub/blob/master/images/logo.png" height=auto weight=100%>
+    </a>
+    <br>
+</p>
+<hr>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9c9c75f1-f7a7-4c92-8847-25995bdff7ba/deploy-status)](https://app.netlify.com/sites/todohub/deploys)
 
 ## :memo: License
