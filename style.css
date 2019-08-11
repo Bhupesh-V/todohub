@@ -1,15 +1,23 @@
 p {
-	background-color: #fff;
+	background-color:#fff521;
 	border-radius: 6px;
 	box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
 	color: #4a4a4a;
 	display: block;
 	padding: 1.25rem;
+	max-width: 400px;
 }
-
+#inputform {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
 label {
 	max-width: 50%;
 	font-weight: bold;
+	font-size: 1.2em;
 }
 body {
 	min-height: 400px;
@@ -84,17 +92,16 @@ button {
 	-webkit-appearance: none;
 }
 
-footer {	
+footer {
 	position: fixed;
 	width: 100%;
 	color: #0d0d0d;
 	text-align: center;
-	height: 56px;
-	padding: 20px;
 	background-color: #fafafa;
 	bottom: 0px;
-	padding-bottom: 50px;
 	left: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }/*
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){ 
   footer { 
