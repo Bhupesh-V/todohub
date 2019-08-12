@@ -63,28 +63,41 @@ function getIssues(){
 	var errortext = document.createTextNode("Ah! Looks like you currently don't have any open issues.");
 	errorheading.appendChild(errortext);
 	htmllist.appendChild(errorheading);
-	return;
-}
-*/
+	return false;
+}*/
+
 function listOfIssues(issues){
 	deleteLoadSVG();
 	if (issues.length !== 0){
 		for (var i=0;i<issues.length;i++){
 			if (issues[i] != null) {
 				htmllist = document.getElementById("list");
-				var para = document.createElement("p");
+				var todo = document.createElement("div");
+				todo.setAttribute("id", "todo");
 
-				//create link
+				//attach title/link to todo
 				var issuelink = document.createElement("a");
 				issuelink.setAttribute("href", issues[i].html_url);
 				var issueTitle = document.createTextNode(issues[i].title);
 				issuelink.appendChild(issueTitle);
+				todo.appendChild(issuelink);
+				
+				//attach date to todo
+				var Tododate = document.createElement("div");
+				Tododate.setAttribute("id", "date");
+				var todo_date = document.createTextNode(issues[i].created_at.slice(0, 10));
+				Tododate.appendChild(todo_date);
+				todo.appendChild(Tododate);
 
-				//attach the link to the <p> tag
-				para.appendChild(issuelink);
-			
-				//attach the <p> tag to div = "list"
-				list.appendChild(para);
+				//attach status to todo
+				var status = document.createElement("div");
+				status.setAttribute("id", "status");
+				var x = document.createTextNode(issues[i].state);
+				status.appendChild(x);
+				todo.appendChild(status);
+
+				//attach the todo to list
+				list.appendChild(todo);
 			}
 		}
 	}
