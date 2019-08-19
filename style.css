@@ -1,5 +1,5 @@
 #todo {
-	background-color:#fff521;
+	 background-image: linear-gradient(to left top, #1aca1e, #69d40b, #98dd00, #c2e501, #e9ed1a);
 	border-radius: 20px;
 	font-weight: bold;
 	box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
@@ -65,17 +65,13 @@ input: hover {
 
 input {
 
-	box-shadow: inset 2px 3px 1px rgba(10,10,10,.1);
-	max-width: 50%;
-	/*width: 100%;*/
-	border-color: #dbdbdb;
 	border-radius: 4px;
-	color: #363636;
-	border: 1px solid 00000082;
-	font-size: 1rem;
-	height: 2.25em;
-	padding-left: calc(.625em - 1px);
-	padding-right: calc(.625em - 1px);
+	color: #4D4D4D;
+	font-weight: 400;
+	width: 100%;
+	padding: 15px 12px;
+	transition: border-color ease-out 300ms;
+	border: 1px solid #e3e3e3;
 }
 
 button:hover {

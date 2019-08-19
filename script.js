@@ -92,7 +92,7 @@ function listOfIssues(issues){
 				//attach status to todo
 				var status = document.createElement("div");
 				status.setAttribute("id", "status");
-				var x = document.createTextNode(issues[i].state);
+				var x = document.createTextNode(issues[i].state.charAt(0).toUpperCase() + issues[i].state.slice(1));
 				status.appendChild(x);
 				todo.appendChild(status);
 
