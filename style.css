@@ -97,12 +97,12 @@ button {
 }
 
 footer {
-	position: fixed;
+	position: relative;
 	width: 100%;
 	color: #0d0d0d;
 	text-align: center;
 	background-color: #fafafa;
-	bottom: 0px;
+	bottom: -200px;
 	left: 0px;
 	padding-top: 10px;
 	padding-bottom: 10px;
