@@ -19,10 +19,27 @@ function deleteLoadSVG(){
 
 function getUsername() {
 	username = document.getElementById("username").value;
-	addLoadSVG();
-	getRepositories(username);
+	checkIfUsernameExists(username);
 }
 
+function checkIfUsernameExists(username) {
+	const fetchPromise = fetch('https://api.github.com/users/' + username);
+
+	fetchPromise
+		.then(response => {
+			const ifExists = response.status == 404 ? false : true;
+			if (ifExists) {
+				addLoadSVG();
+				getRepositories(username);
+			} else {
+				alert('Username doesn\'t exist! Please enter valid');
+				document.getElementById('username').focus();
+			}
+		})
+		.catch( err => {
+			alert("Some error occured! Please try again.");
+		});
+}
 
 function getRepositories(username){
 	const fetchPromise = fetch('https://api.github.com/users/' + username + '/repos');
