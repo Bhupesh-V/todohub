@@ -1,3 +1,18 @@
+#no-issue {
+	text-align: justify;
+	color: #ce2f2e;
+}
+.todo-no-issue {
+	background-image: linear-gradient(to left top, #98dd00, #c2e501, #e9ed1a,  #1aca1e, #69d40b);
+   border-radius: 20px;
+   font-weight: normal;
+   box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+   color: #4a4a4a;
+   display: block;
+   padding: 1.25rem;
+   max-width: 400px;
+   margin: 10px;
+}
 #todo {
 	 background-image: linear-gradient(to left top, #1aca1e, #69d40b, #98dd00, #c2e501, #e9ed1a);
 	border-radius: 20px;
