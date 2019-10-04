@@ -7,7 +7,13 @@ self.addEventListener('install', e => {
         `/`,
         `/index.html`,
         `/style.css`,
-        `/script.js`
+        `/script.js`,
+        `/images/fb.svg`,
+        `/images/github.svg`,
+        `/images/linkedin.svg`,
+        `/images/logo.png`,
+        `/images/puff.svg`,
+        `/images/twitter.svg`
       ])
           .then(() => self.skipWaiting());
     })
